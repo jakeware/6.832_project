@@ -14,6 +14,10 @@ x0 = Point(getStateFrame(r));  % initial conditions: all-zeros
 x0.base_z = .5;
 u0 = double(nominalThrust(r));
 
+v = constructVisualizer(r);
+v.draw(0,double(x0));
+prog = addPlanVisualizer(r,prog);
+
 prog = prog.addStateConstraint(ConstantConstraint(double(x0)),1);
 prog = prog.addInputConstraint(ConstantConstraint(u0),1);
 

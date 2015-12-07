@@ -1,94 +1,82 @@
-function [utraj,xtraj,prog,r] = runDircol
+function [utraj,xtraj,prog,r] = wall_dodge
 
 %% NOTES
 %r.getStateFrame.getCoordinateNames  % print state variable names
 
 %% TODO
-% Add constraints to enforce reasonable solutions
-% Add second pivot to pendulum
-% Limit thrust?
 
 %% Questions
-% How do we get the ball position over the solved trajectory?
-% How do we define an obstacle constraint for the ball?
-% What is a good hybrid system example to work from?
+% How do we add a knot point at a specific xyz location?
+% Why doesn't the vehicle avoid the obstacle without cost functions?
 
 % 1) Ball to goal region
 % 2) Ball along trajectory
 % 3) Swing over obstacle
 
 %% FUNCTION
-% need to redefine this
+% initial and final state
+start_pos = [0;0;0.5];
+goal_pos = [6;0;0.5];
+
+% pendulum length
+pend_len = 0.3;
+
+% time setup
+N = 30;  % must be even
+minimum_duration = .1;
+maximum_duration = 30;
+
+% setup
 r = Quadrotor();
+prog = DircolTrajectoryOptimization(r,N,[minimum_duration maximum_duration]);  
 
 % add obstacle
-size = [0.3,2,1];
-xyz = [3,0,size(3)/2];
+size = [0.3,2,1.0];
+obs_pos = [3,0,size(3)/2];
 rpy = zeros(3,1);
-r = addObstacle(r,size,xyz,rpy);
-
-pend_len = 0.3;  % pendulum length
-N = 30;  % time steps
-minimum_duration = .1;
-maximum_duration = 20;
-prog = DircolTrajectoryOptimization(r,N,[minimum_duration maximum_duration]);  
+r = addObstacle(r,size,obs_pos,rpy);
 
 % add constraint: initial state
 x0 = Point(getStateFrame(r));  
-x0.base_z = 0.5;
+x0.base_z = start_pos(3);
 u0 = double(nominalThrust(r));
+prog = prog.addStateConstraint(ConstantConstraint(double(x0)),1);
+prog = prog.addInputConstraint(ConstantConstraint(u0),1);
 
-% plan visualization
+% initial trajectory
+tf0 = 10;  % initial guess at time
+xf = x0;                       
+xf.base_x = goal_pos(1);
+
+xm = x0;
+xm.base_x = goal_pos(1)/2;
+xm.base_z = 1.2;
+
+pp1 = PPTrajectory(foh([0,tf0/2],[double(x0),double(xm)]));
+pp2 = PPTrajectory(foh([tf0/2,tf0],[double(xm),double(xf)]));
+traj_init.x = pp1.append(pp2);
+traj_init.u = ConstantTrajectory(u0);
+
+% draw initial trajectory
 v = constructVisualizer(r);
 v.draw(0,double(x0));
 prog = addPlanVisualizer(r,prog);
 
-prog = prog.addStateConstraint(ConstantConstraint(double(x0)),1);
-prog = prog.addInputConstraint(ConstantConstraint(u0),1);
-
-% add constraint: final state
-% xf = x0;                       
-% xf.base_x = 6;
-%prog = prog.addStateConstraint(ConstantConstraint(double(xf)),N);
-%prog = prog.addInputConstraint(ConstantConstraint(u0),N);
-
-% add constraint: quad x,y,z goal region
-% final x
-% state_select = 1;
-% A = 1;
-% xf_lb = 5.5;
-% xf_ub = 6.5;
-% prog = prog.addStateConstraint(LinearConstraint(xf_lb,xf_ub,A),{N},state_select);
-% 
-% final y
-% state_select = 2;
-% A = 1;
-% yf_lb = -0.5;
-% yf_ub = 0.5;
-% prog = prog.addStateConstraint(LinearConstraint(yf_lb,yf_ub,A),{N},state_select);
-% 
-% final z
-% state_select = 3;
-% A = 1;
-% zf_lb = 0.25;
-% zf_ub = 0.75;
-% prog = prog.addStateConstraint(LinearConstraint(zf_lb,zf_ub,A),{N},state_select);
-
-% final roll
+% add constraint: final roll
 state_select = 4;
 A = 1;
 rollf_lb = deg2rad(-5);
 rollf_ub = deg2rad(5);
 prog = prog.addStateConstraint(LinearConstraint(rollf_lb,rollf_ub,A),{N},state_select);
 
-% final pitch
+% add constraint: final pitch
 state_select = 5;
 A = 1;
 pitchf_lb = deg2rad(-5);
 pitchf_ub = deg2rad(5);
 prog = prog.addStateConstraint(LinearConstraint(pitchf_lb,pitchf_ub,A),{N},state_select);
 
-% roll and pitch constraint
+% add constraint: roll and pitch
 % % roll
 % state_select = 4;
 % A = eye(N-1);
@@ -113,28 +101,28 @@ prog = prog.addStateConstraint(LinearConstraint(alt_lb,alt_ub,A),{1:N},state_sel
 % add constraint: y-position
 state_select = 2;
 A = eye(N);
-alt_lb = repmat(-1,N,1);
-alt_ub = repmat(1,N,1);
-prog = prog.addStateConstraint(LinearConstraint(alt_lb,alt_ub,A),{1:N},state_select);
+y_lb = repmat(-1,N,1);
+y_ub = repmat(1,N,1);
+prog = prog.addStateConstraint(LinearConstraint(y_lb,y_ub,A),{1:N},state_select);
+
+% add constraint: enforce knot point over wall
+state_select = 1;
+A = 1;
+x_lb = obs_pos(1) - 0.1;
+x_ub = obs_pos(1) + 0.1;
+prog = prog.addStateConstraint(LinearConstraint(x_lb,x_ub,A),{N/2},state_select);
 
 % add constraint: obstacles
-collision_constraint = generateConstraint(MinDistanceConstraint(r,0.05),0);
+collision_constraint = generateConstraint(MinDistanceConstraint(r,0.01),0);
 prog = prog.addStateConstraint(collision_constraint{1},1:N,1:getNumPositions(r));
 
 % add constraint: goal position
-goalConstraint = FunctionHandleConstraint([0;0;0],[0;0;0],14,@(x) final_state_con(r,x),1);
-prog = prog.addStateConstraint(goalConstraint,{N});  % do we need a cell array here?
+goalConstraint = FunctionHandleConstraint([0;0;0],[0;0;0],r.getNumStates(),@(x) final_state_con(r,x,goal_pos),1);
+prog = prog.addStateConstraint(goalConstraint,{N});
 
 % add costs
-% prog = prog.addRunningCost(@cost);
-prog = prog.addFinalCost(@finalCost);
-
-% initial trajectory
-tf0 = 2;  % initial guess at time
-xf = x0;                       
-xf.base_x = 6;
-traj_init.x = PPTrajectory(foh([0,tf0],[double(x0),double(xf)]));
-traj_init.u = ConstantTrajectory(u0);
+prog = prog.addRunningCost(@cost);
+% prog = prog.addFinalCost(@finalCost);
 
 % solve for trajectory
 tic
@@ -154,7 +142,7 @@ x_t = xtraj.eval(time);
 ball_t = zeros(3,length(x_t));
 
 for i=1:length(x_t)
-  q = x_t(1:7,i);
+  q = x_t(1:r.getNumStates()/2,i);
   kinsol = r.doKinematics(q);
   [ball_pos,dBall_pos] = r.forwardKin(kinsol,findFrameId(r,'ball_com'),[0;0;-0.3]);
   ball_t(1:3,i) = ball_pos;
@@ -205,16 +193,13 @@ hold off
 
 end
 
-function [f,df] = final_state_con(obj,x)
-  goal_pos = [4;0;0.5];
-
-  q = x(1:7);
-  qd = x(8:14);
+function [f,df] = final_state_con(obj,x,goal_pos)
+  q = x(1:obj.getNumStates());
   kinsol = obj.doKinematics(q);
   [ball_pos,dBall_pos] = obj.forwardKin(kinsol,findFrameId(obj,'ball_com'),[0;0;-0.3]);
 
   f = ball_pos - goal_pos;
-  df = [dBall_pos zeros(3,7)];
+  df = [dBall_pos zeros(3,obj.getNumStates()/2)];
 end
 
 % cost function
