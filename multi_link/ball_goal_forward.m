@@ -4,11 +4,10 @@ function [utraj,xtraj,prog,r] = ball_goal_forward
 %r.getStateFrame.getCoordinateNames  % print state variable names
 
 %% Setup
-plot = 0;
+plot_results = 0;
 
 %% FUNCTION
-% need to redefine this
-num_links = 2;  % 1,2,4,8 (8 doesn't work, too many links for drake)
+num_links = 8;  % 1,2,4,8 (8 doesn't work, too many links for drake)
 pend_length = 0.32;  % needs to match total length to ball in urdf
 link_length = pend_length/num_links;
 r = QuadrotorML(num_links);
@@ -150,7 +149,7 @@ for i=1:length(x_t)
 end
 
 %% PLOT
-if plot
+if plot_results
   % quad x,y,z
   figure
   hold on
