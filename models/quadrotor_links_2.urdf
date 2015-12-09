@@ -1,0 +1,166 @@
+<?xml version="1.0" ?>
+
+<!-- adapted from Daniel Mellinger, Nathan Michael, Vijay Kumar, "Trajectory Generation and Control for Precise Aggressive Maneuvers with Quadrotors" -->
+
+<robot xmlns="http://drake.mit.edu"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://drake.mit.edu ../../../../pods/drake/doc/drakeURDF.xsd" name="quadrotor">
+
+  <!-- QUADROTOR -->
+  <link name="quad">
+    <inertial>
+      <mass value="0.5"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.0023" ixy="0.0" ixz="0.0" iyy="0.0023" iyz="0.0" izz="0.004"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="quadrotor_base.obj" scale=".1"/>
+      </geometry>
+    </visual>
+    <!-- note: the original hector quadrotor urdf had a (simplified, but still complex) collision mesh, too -->
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder radius=".3" length=".1"/>
+      </geometry>
+    </collision>      
+  </link>
+
+  <!-- PENDULUM -->
+  <!-- LINK1 -->
+  <joint name="theta11" type="continuous">
+    <parent link="quad" />
+    <child link="link_virtual1" />
+    <origin xyz="0 0 0" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.1" />
+  </joint>
+
+  <link name="link_virtual1" /> 
+
+  <joint name="theta12" type="revolute">
+    <parent link="link_virtual1"/>
+    <child link="link1" />
+    <origin xyz="0 0 0" />
+    <axis xyz="1 0 0" />
+    <dynamics damping="0.1" />
+  </joint>
+
+  <link name="link1">
+    <inertial>
+      <origin xyz="0 0 -0.08" rpy="0 0 0" />
+      <mass value="0.001" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.08" rpy="0 0 0" />
+      <geometry>
+         <cylinder length="0.16" radius=".005" />
+      </geometry>
+      <material name="red">
+	<color rgba="1 0 0 1" />
+      </material>
+    </visual>
+  </link>
+
+  <!-- LINK2 -->
+  <joint name="theta21" type="continuous">
+    <parent link="link1" />
+    <child link="link_virtual2" />
+    <origin xyz="0 0 -0.16" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.1" />
+  </joint>
+
+  <link name="link_virtual2" /> 
+
+  <joint name="theta22" type="revolute">
+    <parent link="link_virtual2"/>
+    <child link="link2" />
+    <origin xyz="0 0 0" />
+    <axis xyz="1 0 0" />
+    <dynamics damping="0.1" />
+  </joint>
+
+  <link name="link2">
+    <inertial>
+      <origin xyz="0 0 -0.08" rpy="0 0 0" />
+      <mass value="0.001" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.08" rpy="0 0 0" />
+      <geometry>
+         <cylinder length="0.16" radius=".005" />
+      </geometry>
+      <material name="blue">
+	<color rgba="0 0 1 1" />
+      </material>
+    </visual>
+  </link>
+
+  <!-- BALL -->
+  <joint name="arm_weld" type="fixed">
+    <parent link="link2" />
+    <child link="ball" />
+  </joint>
+
+  <link name="ball">
+    <inertial>
+      <origin xyz="0 0 -0.16" rpy="0 0 0" />
+      <mass value="0.5"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.16"/>
+      <geometry>
+        <sphere radius=".025"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.16"/>
+      <geometry>
+        <sphere radius=".025"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <frame link="ball" name="ball_com" rpy="0 0 0" xyz="0 0 0"/>
+
+  <!-- FORCES -->
+  <force_element name="prop1">
+    <propellor lower_limit="0" upper_limit="10" scale_factor_thrust="1.0" scale_factor_moment="0.0245">
+      <parent link="quad"/>
+      <origin xyz=".1750 0 0"/>
+      <axis xyz="0 0 1"/>
+    </propellor>
+  </force_element>
+
+  <force_element name="prop2">
+    <propellor lower_limit="0" upper_limit="10" scale_factor_thrust="1.0" scale_factor_moment="-0.0245">
+      <parent link="quad"/>
+      <origin xyz="0 .1750 0 "/>
+      <axis xyz="0 0 1"/>
+    </propellor>
+  </force_element>
+  
+  <force_element name="prop3">
+    <propellor lower_limit="0" upper_limit="10" scale_factor_thrust="1.0" scale_factor_moment="0.0245">
+      <parent link="quad"/>
+      <origin xyz="-.1750 0 0"/>
+      <axis xyz="0 0 1"/>
+    </propellor>
+  </force_element>
+  
+  <force_element name="prop4">
+    <propellor lower_limit="0" upper_limit="10" scale_factor_thrust="1.0" scale_factor_moment="-0.0245">
+      <parent link="quad"/>
+      <origin xyz="0 -.1750 0"/>
+      <axis xyz="0 0 1"/>
+    </propellor>
+  </force_element>
+  
+</robot>
+
