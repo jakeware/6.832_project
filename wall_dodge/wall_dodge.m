@@ -9,7 +9,7 @@ plot_results = 0;
 num_links = 1;  % 1,2,4,8 (8 doesn't work, too many links for drake)
 pend_length = 0.32;  % needs to match total length to ball in urdf
 link_length = pend_length/num_links;
-max_z = 2.0;
+max_z = 1.25;
 
 %% FUNCTION
 % initial and final state
@@ -17,22 +17,22 @@ start_pos = [0;0;0.5];
 goal_pos = [6;0;0.5];
 
 % time setup
-N = 10;  % must be even
+N = 16;  % must be even
 minimum_duration = .1;
 maximum_duration = 10;
-wall_node = N/2;
+wall_node = 12;
 
 % setup
 r = Quadrotor();
 prog = DircolTrajectoryOptimization(r,N,[minimum_duration maximum_duration]);  
 
 % add obstacle
-obs_size = [0.3,2,1.0];
+obs_size = [0.2,2,1.0];
 obs_pos = [goal_pos(1)/2,0,obs_size(3)/2];
 rpy = zeros(3,1);
 r = addObstacle(r,obs_size,obs_pos,rpy);
 obs_con_pos = obs_pos';
-obs_con_pos(3) = 1.1;
+obs_con_pos(3) = 1.05;
 
 % add constraint: initial state
 x0 = Point(getStateFrame(r));  
@@ -80,20 +80,26 @@ pitchf_lb = deg2rad(-5);
 pitchf_ub = deg2rad(5);
 prog = prog.addStateConstraint(LinearConstraint(pitchf_lb,pitchf_ub,A),{N},state_select);
 
-% add constraint: roll and pitch
-% roll
-% state_select = 4;
-% A = eye(N-1);
-% roll_lb = repmat(deg2rad(-5),N-1,1);
-% roll_ub = repmat(deg2rad(5),N-1,1);
-% prog = prog.addStateConstraint(LinearConstraint(roll_lb,roll_ub,A),{1:N-1},state_select);
+% add constraint: running roll
+state_select = 4;
+A = eye(N-1);
+roll_lb = repmat(deg2rad(-5),N-1,1);
+roll_ub = repmat(deg2rad(5),N-1,1);
+prog = prog.addStateConstraint(LinearConstraint(roll_lb,roll_ub,A),{1:N-1},state_select);
 
-% pitch
-% state_select = 5;
-% A = eye(N-1);
-% pitch_lb = repmat(deg2rad(-45),N-1,1);
-% pitch_ub = repmat(deg2rad(45),N-1,1);
-% prog = prog.addStateConstraint(LinearConstraint(pitch_lb,pitch_ub,A),{1:N-1},state_select);
+% add constraint: running pitch
+state_select = 5;
+A = eye(N-1);
+pitch_lb = repmat(deg2rad(-45),N-1,1);
+pitch_ub = repmat(deg2rad(45),N-1,1);
+prog = prog.addStateConstraint(LinearConstraint(pitch_lb,pitch_ub,A),{1:N-1},state_select);
+
+% add constraint: running yaw
+state_select = 6;
+A = eye(N-1);
+yaw_lb = repmat(deg2rad(-5),N-1,1);
+yaw_ub = repmat(deg2rad(5),N-1,1);
+prog = prog.addStateConstraint(LinearConstraint(yaw_lb,yaw_ub,A),{1:N-1},state_select);
 
 % add constraint: z-position
 state_select = 3;
@@ -103,24 +109,42 @@ alt_ub = repmat(max_z,N,1);
 prog = prog.addStateConstraint(LinearConstraint(alt_lb,alt_ub,A),{1:N},state_select);
 
 % add constraint: y-position
-% state_select = 2;
-% A = eye(N);
-% y_lb = repmat(-0.1,N,1);
-% y_ub = repmat(0.1,N,1);
-% prog = prog.addStateConstraint(LinearConstraint(y_lb,y_ub,A),{1:N},state_select);
+state_select = 2;
+A = eye(N);
+y_lb = repmat(-0.1,N,1);
+y_ub = repmat(0.1,N,1);
+prog = prog.addStateConstraint(LinearConstraint(y_lb,y_ub,A),{1:N},state_select);
 
 % add constraint: x-position
-% state_select = 1;
-% A = eye(N/2);
-% y_lb = repmat(start_pos(1) - 5,N/2,1);
-% y_ub = repmat(goal_pos(1)/2,N/2,1);
-% prog = prog.addStateConstraint(LinearConstraint(y_lb,y_ub,A),{1:wall_node},state_select);
+% nodes before wall
+state_select = 1;
+size_A = wall_node;
+A = eye(size_A);
+x_lb = repmat(start_pos(1) - 5,size_A,1);
+x_ub = repmat(goal_pos(1)/2,size_A,1);
+prog = prog.addStateConstraint(LinearConstraint(x_lb,x_ub,A),{1:wall_node},state_select);
 
-% state_select = 1;
-% A = eye(N/2);
-% x_lb = repmat(goal_pos(1)/2,N/2,1);
-% x_ub = repmat(goal_pos(1) + 5,N/2,1);
-% prog = prog.addStateConstraint(LinearConstraint(x_lb,x_ub,A),{wall_node+1:N},state_select);
+% add constraint: theta 1
+state_select = 7;
+A = eye(N);
+theta1_lb = repmat(-pi/2,N,1);
+theta1_ub = repmat(pi/2,N,1);
+prog = prog.addStateConstraint(LinearConstraint(theta1_lb,theta1_ub,A),{1:N},state_select);
+
+% add constraint: theta 2
+state_select = 8;
+A = eye(N);
+theta2_lb = repmat(-pi/2,N,1);
+theta2_ub = repmat(pi/2,N,1);
+prog = prog.addStateConstraint(LinearConstraint(theta2_lb,theta2_ub,A),{1:N},state_select);
+
+% nodes after wall
+state_select = 1;
+size_A = N - wall_node;
+A = eye(size_A);
+x_lb = repmat(goal_pos(1)/2,size_A,1);
+x_ub = repmat(goal_pos(1) + 5,size_A,1);
+prog = prog.addStateConstraint(LinearConstraint(x_lb,x_ub,A),{wall_node+1:N},state_select);
 
 % add constraint: enforce knot point over wall
 state_select = 1;
@@ -144,7 +168,7 @@ goalConstraint = FunctionHandleConstraint([0;0;0],[0;0;0],r.getNumStates(),@(x) 
 prog = prog.addStateConstraint(goalConstraint,{N});
 
 % add costs
-% prog = prog.addRunningCost(@cost);
+prog = prog.addRunningCost(@cost);
 % prog = prog.addFinalCost(@finalCost);
 
 % solve for trajectory
