@@ -4,10 +4,11 @@ function [utraj,xtraj,prog,r] = ball_trajectory
 %r.getStateFrame.getCoordinateNames  % print state variable names
 
 %% FUNCTION
-% need to redefine this
-r = QuadrotorBallTrajectory();
+num_links = 1;  % 1,2,4,8 (8 doesn't work, too many links for drake)
+pend_length = 0.32;  % needs to match total length to ball in urdf
+link_length = pend_length/num_links;
+r = QuadrotorML(num_links);
 
-pend_len = 0.3;  % pendulum length
 N = 50;  % time steps
 minimum_duration = .1;
 maximum_duration = 20;
@@ -70,7 +71,7 @@ prog = prog.addStateConstraint(LinearConstraint(theta1_lb,theta1_ub,A),{1:N},sta
 
 % add constraint: goal position
 for i=1:N
-  goalConstraint = FunctionHandleConstraint([0;0;0],[0;0;0],r.getNumStates,@(x) state_con(r,x,goal_pos(:,i)),1);
+  goalConstraint = FunctionHandleConstraint([0;0;0],[0;0;0],r.getNumStates,@(x) state_con(r,x,goal_pos(:,i),link_length),1);
   prog = prog.addStateConstraint(goalConstraint,{i});
 end
 
@@ -105,7 +106,7 @@ ball_t = zeros(3,length(x_t));
 for i=1:length(x_t)
   q = x_t(1:7,i);
   kinsol = r.doKinematics(q);
-  [ball_pos,dBall_pos] = r.forwardKin(kinsol,findFrameId(r,'ball_com'),[0;0;-0.3]);
+  [ball_pos,dBall_pos] = r.forwardKin(kinsol,findFrameId(r,'ball_com'),[0;0;-link_length]);
   ball_t(1:3,i) = ball_pos;
 end
 
@@ -155,10 +156,10 @@ hold off
 
 end
 
-function [f,df] = state_con(obj,x,goal_pos)
+function [f,df] = state_con(obj,x,goal_pos,link_length)
   q = x(1:obj.getNumStates/2);
   kinsol = obj.doKinematics(q);
-  [ball_pos,dBall_pos] = obj.forwardKin(kinsol,findFrameId(obj,'ball_com'),[0;0;-0.3]);
+  [ball_pos,dBall_pos] = obj.forwardKin(kinsol,findFrameId(obj,'ball_com'),[0;0;-link_length]);
 
   f = ball_pos - goal_pos;
   df = [dBall_pos zeros(3,obj.getNumStates/2)];
