@@ -23,7 +23,7 @@ quad_bound_max = [2,1,2];
 quad_bound_min = [-1,-1,pend_len];
 
 % add constraint: Ball Goal state
-goal_pos = [2.28;0;1];  % ball outside of box in x direction
+goal_pos = [2.4;0;1];  % ball outside of box in x direction
 %goal_pos = [0;0;2.2];  % ball outside of box in x direction
 
 % plan visualization
@@ -111,8 +111,8 @@ goalConstraint = FunctionHandleConstraint([0;0;0],[0;0;0],r.getNumStates,@(x) fi
 prog = prog.addStateConstraint(goalConstraint,{N});
 
 % add costs
-prog = prog.addRunningCost(@cost);
-prog = prog.addFinalCost(@finalCost);
+%prog = prog.addRunningCost(@cost);
+%prog = prog.addFinalCost(@finalCost);
 
 % initial trajectory
 tf0 = 2;  % initial guess at time
