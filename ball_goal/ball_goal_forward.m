@@ -7,7 +7,7 @@ function [utraj,xtraj,prog,r] = ball_goal_forward
 plot_results = 0;
 
 %% FUNCTION
-num_links = 8;  % 1,2,4,8 (8 doesn't work, too many links for drake)
+num_links = 4;  % 1,2,4,8
 pend_length = 0.32;  % needs to match total length to ball in urdf
 link_length = pend_length/num_links;
 r = QuadrotorML(num_links);
