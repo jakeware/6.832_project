@@ -3,38 +3,36 @@ function [utraj,xtraj,prog,r] = wall_dodge
 %% NOTES
 %r.getStateFrame.getCoordinateNames  % print state variable names
 
-%% TODO
+%% Setup
+plot_results = 0;
 
-%% Questions
-% How do we add a knot point at a specific xyz location?
-% Why doesn't the vehicle avoid the obstacle without cost functions?
-
-% 1) Ball to goal region
-% 2) Ball along trajectory
-% 3) Swing over obstacle
+num_links = 1;  % 1,2,4,8 (8 doesn't work, too many links for drake)
+pend_length = 0.32;  % needs to match total length to ball in urdf
+link_length = pend_length/num_links;
+max_z = 2.0;
 
 %% FUNCTION
 % initial and final state
 start_pos = [0;0;0.5];
 goal_pos = [6;0;0.5];
 
-% pendulum length
-pend_len = 0.3;
-
 % time setup
-N = 30;  % must be even
+N = 10;  % must be even
 minimum_duration = .1;
-maximum_duration = 30;
+maximum_duration = 10;
+wall_node = N/2;
 
 % setup
 r = Quadrotor();
 prog = DircolTrajectoryOptimization(r,N,[minimum_duration maximum_duration]);  
 
 % add obstacle
-size = [0.3,2,1.0];
-obs_pos = [3,0,size(3)/2];
+obs_size = [0.3,2,1.0];
+obs_pos = [goal_pos(1)/2,0,obs_size(3)/2];
 rpy = zeros(3,1);
-r = addObstacle(r,size,obs_pos,rpy);
+r = addObstacle(r,obs_size,obs_pos,rpy);
+obs_con_pos = obs_pos';
+obs_con_pos(3) = 1.1;
 
 % add constraint: initial state
 x0 = Point(getStateFrame(r));  
@@ -45,12 +43,18 @@ prog = prog.addInputConstraint(ConstantConstraint(u0),1);
 
 % initial trajectory
 tf0 = 10;  % initial guess at time
-xf = x0;                       
-xf.base_x = goal_pos(1);
 
+% intermediate pose
 xm = x0;
 xm.base_x = goal_pos(1)/2;
-xm.base_z = 1.2;
+xm.base_y = goal_pos(2);
+xm.base_z = max_z;
+
+% final pose
+xf = x0;                       
+xf.base_x = goal_pos(1);
+xf.base_y = goal_pos(2);
+xf.base_z = goal_pos(3);
 
 pp1 = PPTrajectory(foh([0,tf0/2],[double(x0),double(xm)]));
 pp2 = PPTrajectory(foh([tf0/2,tf0],[double(xm),double(xf)]));
@@ -77,14 +81,14 @@ pitchf_ub = deg2rad(5);
 prog = prog.addStateConstraint(LinearConstraint(pitchf_lb,pitchf_ub,A),{N},state_select);
 
 % add constraint: roll and pitch
-% % roll
+% roll
 % state_select = 4;
 % A = eye(N-1);
-% roll_lb = repmat(deg2rad(-45),N-1,1);
-% roll_ub = repmat(deg2rad(45),N-1,1);
+% roll_lb = repmat(deg2rad(-5),N-1,1);
+% roll_ub = repmat(deg2rad(5),N-1,1);
 % prog = prog.addStateConstraint(LinearConstraint(roll_lb,roll_ub,A),{1:N-1},state_select);
-% 
-% % pitch
+
+% pitch
 % state_select = 5;
 % A = eye(N-1);
 % pitch_lb = repmat(deg2rad(-45),N-1,1);
@@ -94,34 +98,53 @@ prog = prog.addStateConstraint(LinearConstraint(pitchf_lb,pitchf_ub,A),{N},state
 % add constraint: z-position
 state_select = 3;
 A = eye(N);
-alt_lb = repmat(pend_len,N,1);
-alt_ub = repmat(1.25,N,1);
+alt_lb = repmat(pend_length,N,1);
+alt_ub = repmat(max_z,N,1);
 prog = prog.addStateConstraint(LinearConstraint(alt_lb,alt_ub,A),{1:N},state_select);
 
 % add constraint: y-position
-state_select = 2;
-A = eye(N);
-y_lb = repmat(-1,N,1);
-y_ub = repmat(1,N,1);
-prog = prog.addStateConstraint(LinearConstraint(y_lb,y_ub,A),{1:N},state_select);
+% state_select = 2;
+% A = eye(N);
+% y_lb = repmat(-0.1,N,1);
+% y_ub = repmat(0.1,N,1);
+% prog = prog.addStateConstraint(LinearConstraint(y_lb,y_ub,A),{1:N},state_select);
+
+% add constraint: x-position
+% state_select = 1;
+% A = eye(N/2);
+% y_lb = repmat(start_pos(1) - 5,N/2,1);
+% y_ub = repmat(goal_pos(1)/2,N/2,1);
+% prog = prog.addStateConstraint(LinearConstraint(y_lb,y_ub,A),{1:wall_node},state_select);
+
+% state_select = 1;
+% A = eye(N/2);
+% x_lb = repmat(goal_pos(1)/2,N/2,1);
+% x_ub = repmat(goal_pos(1) + 5,N/2,1);
+% prog = prog.addStateConstraint(LinearConstraint(x_lb,x_ub,A),{wall_node+1:N},state_select);
 
 % add constraint: enforce knot point over wall
 state_select = 1;
 A = 1;
-x_lb = obs_pos(1) - 0.1;
-x_ub = obs_pos(1) + 0.1;
-prog = prog.addStateConstraint(LinearConstraint(x_lb,x_ub,A),{N/2},state_select);
+knot_lb = obs_pos(1) - 0.01;
+knot_ub = obs_pos(1) + 0.01;
+prog = prog.addStateConstraint(LinearConstraint(knot_lb,knot_ub,A),{wall_node},state_select);
 
-% add constraint: obstacles
-collision_constraint = generateConstraint(MinDistanceConstraint(r,0.01),0);
-prog = prog.addStateConstraint(collision_constraint{1},1:N,1:getNumPositions(r));
+% add constraint: old obstacles
+% collision_constraint = generateConstraint(MinDistanceConstraint(r,0.01),0);
+% prog = prog.addStateConstraint(collision_constraint{1},1:N,1:getNumPositions(r));
+
+% add constraint: new obstacle constraint on pendulum height
+obs_lb = [-Inf;-Inf;obs_con_pos(3)];
+obs_ub = [Inf;Inf;max_z];
+obsConstraint = FunctionHandleConstraint(obs_lb,obs_ub,r.getNumStates(),@(x) obs_state_con(r,x,obs_con_pos,link_length),1);
+prog = prog.addStateConstraint(obsConstraint,{wall_node});
 
 % add constraint: goal position
-goalConstraint = FunctionHandleConstraint([0;0;0],[0;0;0],r.getNumStates(),@(x) final_state_con(r,x,goal_pos),1);
+goalConstraint = FunctionHandleConstraint([0;0;0],[0;0;0],r.getNumStates(),@(x) final_state_con(r,x,goal_pos,link_length),1);
 prog = prog.addStateConstraint(goalConstraint,{N});
 
 % add costs
-prog = prog.addRunningCost(@cost);
+% prog = prog.addRunningCost(@cost);
 % prog = prog.addFinalCost(@finalCost);
 
 % solve for trajectory
@@ -144,62 +167,73 @@ ball_t = zeros(3,length(x_t));
 for i=1:length(x_t)
   q = x_t(1:r.getNumStates()/2,i);
   kinsol = r.doKinematics(q);
-  [ball_pos,dBall_pos] = r.forwardKin(kinsol,findFrameId(r,'ball_com'),[0;0;-0.3]);
+  [ball_pos,dBall_pos] = r.forwardKin(kinsol,findFrameId(r,'ball_com'),[0;0;-link_length]);
   ball_t(1:3,i) = ball_pos;
 end
 
 %% PLOT
-% quad x,y,z
-figure
-hold on
+if plot_results
+  % quad x,y,z
+  figure
+  hold on
 
-plot(time,x_t(1,:),'r-')
-plot(time,x_t(2,:),'g-')
-plot(time,x_t(3,:),'b-')
-title('Quad Position Over Time')
-xlabel('Time [s]')
-ylabel('Position [m]')
-legend('x','y','z')
-hold off
+  plot(time,x_t(1,:),'r-')
+  plot(time,x_t(2,:),'g-')
+  plot(time,x_t(3,:),'b-')
+  title('Quad Position Over Time')
+  xlabel('Time [s]')
+  ylabel('Position [m]')
+  legend('x','y','z')
+  hold off
 
-% ball x,y,z
-figure
-hold on
+  % ball x,y,z
+  figure
+  hold on
 
-plot(time,ball_t(1,:),'r-')
-plot(time,ball_t(2,:),'g-')
-plot(time,ball_t(3,:),'b-')
-title('Ball Position Over Time')
-xlabel('Time [s]')
-ylabel('Position [m]')
-legend('x','y','z')
+  plot(time,ball_t(1,:),'r-')
+  plot(time,ball_t(2,:),'g-')
+  plot(time,ball_t(3,:),'b-')
+  title('Ball Position Over Time')
+  xlabel('Time [s]')
+  ylabel('Position [m]')
+  legend('x','y','z')
 
-hold off
+  hold off
 
-% 3d plot of quad and ball
-figure
-hold on
+  % 3d plot of quad and ball
+  figure
+  hold on
 
-plot3(x_t(1,:),x_t(2,:),x_t(3,:),'b-')
-plot3(ball_t(1,:),ball_t(2,:),ball_t(3,:),'r-')
+  plot3(x_t(1,:),x_t(2,:),x_t(3,:),'b-')
+  plot3(ball_t(1,:),ball_t(2,:),ball_t(3,:),'r-')
 
-title('Quad and Ball Position Over Time')
-xlabel('X-Position [m]')
-ylabel('Y-Position [m]')
-zlabel('Z-Position [m]')
-legend('quad','ball')
+  title('Quad and Ball Position Over Time')
+  xlabel('X-Position [m]')
+  ylabel('Y-Position [m]')
+  zlabel('Z-Position [m]')
+  legend('quad','ball')
 
-hold off
+  hold off
+end
 
 end
 
-function [f,df] = final_state_con(obj,x,goal_pos)
-  q = x(1:obj.getNumStates());
+function [f,df] = final_state_con(obj,x,goal_pos,link_length)
+  q = x(1:obj.getNumStates/2);
   kinsol = obj.doKinematics(q);
-  [ball_pos,dBall_pos] = obj.forwardKin(kinsol,findFrameId(obj,'ball_com'),[0;0;-0.3]);
+  [ball_pos,dBall_pos] = obj.forwardKin(kinsol,findFrameId(obj,'ball_com'),[0;0;-link_length]);
 
   f = ball_pos - goal_pos;
-  df = [dBall_pos zeros(3,obj.getNumStates()/2)];
+  df = [dBall_pos zeros(3,obj.getNumStates/2)];
+end
+
+function [f,df] = obs_state_con(obj,x,obs_con_pos,link_length)
+  q = x(1:obj.getNumStates/2);
+  kinsol = obj.doKinematics(q);
+  [ball_pos,dBall_pos] = obj.forwardKin(kinsol,findFrameId(obj,'ball_com'),[0;0;-link_length]);
+
+  f = ball_pos - obs_con_pos;
+  df = [dBall_pos zeros(3,obj.getNumStates/2)];
 end
 
 % cost function
