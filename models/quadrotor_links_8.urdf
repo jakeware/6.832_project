@@ -220,7 +220,7 @@
 
   <link name="link_virtual6" /> 
 
-  <joint name="theta52" type="revolute">
+  <joint name="theta62" type="revolute">
     <parent link="link_virtual6"/>
     <child link="link6" />
     <origin xyz="0 0 0" />
