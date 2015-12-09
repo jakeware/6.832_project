@@ -50,7 +50,8 @@
     </visual>
   </link>
 
-  <link name="upper_link">
+  <!-- LINK1 -->
+  <link name="link1">
     <inertial>
       <origin xyz="0 0 -0.075" rpy="0 0 0" />
       <mass value="0.05" />
@@ -67,7 +68,17 @@
     </visual>
   </link>
 
-  <link name="lower_link">
+  <joint name="theta1" type="continuous">
+    <parent link="pend_base" />
+    <child link="link1" />
+    <origin xyz="0 0 0" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.1" />
+  </joint>
+
+
+  <!-- LINK2 -->
+  <link name="link2">
     <inertial>
       <origin xyz="0 0 -0.075" rpy="0 0 0" />
       <mass value="0.05" />
@@ -84,24 +95,16 @@
     </visual>
   </link>
   
-  <joint name="shoulder" type="continuous">
-    <parent link="pend_base" />
-    <child link="upper_link" />
-    <origin xyz="0 0 0" />
-    <axis xyz="0 1 0" />
-    <dynamics damping="0.1" />
-  </joint>
-
-  <joint name="elbow" type="continuous">
-    <parent link="upper_link" />
-    <child link="lower_link" />
+  <joint name="theta2" type="continuous">
+    <parent link="link1" />
+    <child link="link2" />
     <origin xyz="0 0 -0.15" />
     <axis xyz="0 1 0" />
     <dynamics damping="0.1" />
   </joint>
 
   <joint name="arm_weld" type="fixed">
-    <parent link="lower_link" />
+    <parent link="link2" />
     <child link="ball" />
   </joint>
 
