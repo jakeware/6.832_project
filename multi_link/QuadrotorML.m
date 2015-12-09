@@ -1,12 +1,13 @@
-classdef Quadrotor < RigidBodyManipulator
+classdef QuadrotorML < RigidBodyManipulator
   
   methods
-    function obj = Quadrotor()
+    function obj = QuadrotorML(num_links)
       options.floating = true; 
       options.terrain = RigidBodyFlatTerrain();
       w = warning('off','Drake:RigidBodyManipulator:ReplacedCylinder');
       warning('off','Drake:RigidBodyManipulator:UnsupportedContactPoints');
-      obj = obj@RigidBodyManipulator(getFullPathFromRelativePath('quadrotor_links.urdf'),options);
+      filename = strcat('quadrotor_links_',num2str(num_links),'.urdf');
+      obj = obj@RigidBodyManipulator(getFullPathFromRelativePath(filename),options);
       warning(w);
       
       obj = compile(obj);

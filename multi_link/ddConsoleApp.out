@@ -108,3 +108,1895 @@ vtkTransformPolyDataFilter (0x2a3ffd0): No input data
 ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
 vtkTransformPolyDataFilter (0x29d80c0): No input data
 
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x29e91d0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x29d59a0): Algorithm vtkOBJReader(0x29e91d0) returned failure for request: vtkInformation (0x29cb080)
+  Debug: Off
+  Modified Time: 1181918
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29e91d0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2ad0620): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2a79fa0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2a57890): Algorithm vtkOBJReader(0x2a79fa0) returned failure for request: vtkInformation (0x2d85a20)
+  Debug: Off
+  Modified Time: 1311983
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2a79fa0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29e91d0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2e58300): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2a4b4b0): Algorithm vtkOBJReader(0x2e58300) returned failure for request: vtkInformation (0x2ada040)
+  Debug: Off
+  Modified Time: 1710074
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2e58300): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2e6b740): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x29bfb80): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2a73bd0): Algorithm vtkOBJReader(0x29bfb80) returned failure for request: vtkInformation (0x28a57c0)
+  Debug: Off
+  Modified Time: 2470637
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2a3c900): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2ecda00): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2a3c900): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2ef92c0): Algorithm vtkOBJReader(0x2a3c900) returned failure for request: vtkInformation (0x2e72500)
+  Debug: Off
+  Modified Time: 2752548
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2a57f10): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29e69a0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2ad06f0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2e6abd0): Algorithm vtkOBJReader(0x2ad06f0) returned failure for request: vtkInformation (0x29d19a0)
+  Debug: Off
+  Modified Time: 2833517
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2a780d0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29dd030): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2ecda00): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2ef6b10): Algorithm vtkOBJReader(0x2ecda00) returned failure for request: vtkInformation (0x29ee9a0)
+  Debug: Off
+  Modified Time: 2870339
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2d4c9f0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29bfb80): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x29c8610): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2a5dc30): Algorithm vtkOBJReader(0x29c8610) returned failure for request: vtkInformation (0x2f059d0)
+  Debug: Off
+  Modified Time: 3729160
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2f85110): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2ecda00): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x345ab60): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x3474c50): Algorithm vtkOBJReader(0x345ab60) returned failure for request: vtkInformation (0x28a57c0)
+  Debug: Off
+  Modified Time: 3917142
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x345ab60): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2e63a10): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2d96e40): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2a62570): Algorithm vtkOBJReader(0x2d96e40) returned failure for request: vtkInformation (0x2d513f0)
+  Debug: Off
+  Modified Time: 4106945
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2d96e40): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x345d7f0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x345d7f0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2adce00): Algorithm vtkOBJReader(0x345d7f0) returned failure for request: vtkInformation (0x2ecf670)
+  Debug: Off
+  Modified Time: 4299796
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x345d7f0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2d4c9f0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2ad0620): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2a558b0): Algorithm vtkOBJReader(0x2ad0620) returned failure for request: vtkInformation (0x2a79850)
+  Debug: Off
+  Modified Time: 4751965
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2ad0620): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x345fac0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x29091d0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x34642b0): Algorithm vtkOBJReader(0x29091d0) returned failure for request: vtkInformation (0x2d85a20)
+  Debug: Off
+  Modified Time: 4970407
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2a7b520): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2ae1950): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2f05970): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2e4da80): Algorithm vtkOBJReader(0x2f05970) returned failure for request: vtkInformation (0x29d1200)
+  Debug: Off
+  Modified Time: 5244256
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2e6c460): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29c9c50): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2a3ffe0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x345fba0): Algorithm vtkOBJReader(0x2a3ffe0) returned failure for request: vtkInformation (0x2d96e40)
+  Debug: Off
+  Modified Time: 5598387
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2f05970): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2a56330): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x34585e0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x27d65c0): Algorithm vtkOBJReader(0x34585e0) returned failure for request: vtkInformation (0x2a50a90)
+  Debug: Off
+  Modified Time: 5951037
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29091d0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2e6c460): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2e6d4c0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2e498f0): Algorithm vtkOBJReader(0x2e6d4c0) returned failure for request: vtkInformation (0x2893e50)
+  Debug: Off
+  Modified Time: 7180201
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x33d7080): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29091d0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2f42690): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2ecd9d0): Algorithm vtkOBJReader(0x2f42690) returned failure for request: vtkInformation (0x2e6c170)
+  Debug: Off
+  Modified Time: 7588012
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2ad0560): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29c9c50): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2e6c460): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x29c9d00): Algorithm vtkOBJReader(0x2e6c460) returned failure for request: vtkInformation (0x252d3e0)
+  Debug: Off
+  Modified Time: 7838893
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2e6c460): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2ad0560): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x29c39c0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x29e1770): Algorithm vtkOBJReader(0x29c39c0) returned failure for request: vtkInformation (0x2a400e0)
+  Debug: Off
+  Modified Time: 8274986
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29db050): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2e48ac0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2f01150): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x345fba0): Algorithm vtkOBJReader(0x2f01150) returned failure for request: vtkInformation (0x2eec4f0)
+  Debug: Off
+  Modified Time: 8378439
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2f01150): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2a600c0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x29cb080): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2eca340): Algorithm vtkOBJReader(0x29cb080) returned failure for request: vtkInformation (0x295be20)
+  Debug: Off
+  Modified Time: 8844974
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2e6c460): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2e6c7f0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x29c8630): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2f51020): Algorithm vtkOBJReader(0x29c8630) returned failure for request: vtkInformation (0x2d2f820)
+  Debug: Off
+  Modified Time: 8898383
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x33d70c0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29c9c50): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x29c8630): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2a4c120): Algorithm vtkOBJReader(0x29c8630) returned failure for request: vtkInformation (0x345fac0)
+  Debug: Off
+  Modified Time: 9586038
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2e4d6d0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x33d70c0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x29c8630): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2f03410): Algorithm vtkOBJReader(0x29c8630) returned failure for request: vtkInformation (0x300a8f0)
+  Debug: Off
+  Modified Time: 9784953
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2ee8f50): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x345f610): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x3b4cff0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x33c0d80): Algorithm vtkOBJReader(0x3b4cff0) returned failure for request: vtkInformation (0x2a42400)
+  Debug: Off
+  Modified Time: 9984223
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2ee8f50): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29d8f70): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x28ae1a0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x3458290): Algorithm vtkOBJReader(0x28ae1a0) returned failure for request: vtkInformation (0x2f05760)
+  Debug: Off
+  Modified Time: 10575600
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29c9c50): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x3412e30): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2e60660): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x27d24f0): Algorithm vtkOBJReader(0x2e60660) returned failure for request: vtkInformation (0x345fac0)
+  Debug: Off
+  Modified Time: 10620062
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2e44ee0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2e60660): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2f01150): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2ef6b10): Algorithm vtkOBJReader(0x2f01150) returned failure for request: vtkInformation (0x27d6610)
+  Debug: Off
+  Modified Time: 10659939
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29d8f70): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2e3be60): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2a3d400): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x3e09900): Algorithm vtkOBJReader(0x2a3d400) returned failure for request: vtkInformation (0x1a3ad00)
+  Debug: Off
+  Modified Time: 10712940
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2d8cb70): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29e8bd0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2e60660): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2a779b0): Algorithm vtkOBJReader(0x2e60660) returned failure for request: vtkInformation (0x1b129d0)
+  Debug: Off
+  Modified Time: 10913750
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x28ae1a0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2a3cdc0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x29d6400): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2909030): Algorithm vtkOBJReader(0x29d6400) returned failure for request: vtkInformation (0x2a600f0)
+  Debug: Off
+  Modified Time: 11166366
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29c9c50): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x3473f00): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2e606d0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2f01150): Algorithm vtkOBJReader(0x2e606d0) returned failure for request: vtkInformation (0x362a7f0)
+  Debug: Off
+  Modified Time: 11345255
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2ad0620): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x3b4cff0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2f51050): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x33c0c20): Algorithm vtkOBJReader(0x2f51050) returned failure for request: vtkInformation (0x29da140)
+  Debug: Off
+  Modified Time: 12158644
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x3a4bb60): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x3f83200): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x29f56f0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2a62e40): Algorithm vtkOBJReader(0x29f56f0) returned failure for request: vtkInformation (0x29ceab0)
+  Debug: Off
+  Modified Time: 12510965
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29cc3f0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2a55a70): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2ef92f0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2f01150): Algorithm vtkOBJReader(0x2ef92f0) returned failure for request: vtkInformation (0x29eb080)
+  Debug: Off
+  Modified Time: 12846838
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2a54ba0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2e606d0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2ef92f0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2ebc930): Algorithm vtkOBJReader(0x2ef92f0) returned failure for request: vtkInformation (0x2ad06f0)
+  Debug: Off
+  Modified Time: 13178449
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x3473e40): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29d59a0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x29c9c50): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x3edc1b0): Algorithm vtkOBJReader(0x29c9c50) returned failure for request: vtkInformation (0x2a550c0)
+  Debug: Off
+  Modified Time: 14195880
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x3473e40): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2e6b740): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x3473e40): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x3ef5380): Algorithm vtkOBJReader(0x3473e40) returned failure for request: vtkInformation (0x33cc5f0)
+  Debug: Off
+  Modified Time: 14496960
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29d7860): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x345ab90): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x3f8b100): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x29cce60): Algorithm vtkOBJReader(0x3f8b100) returned failure for request: vtkInformation (0x29ccde0)
+  Debug: Off
+  Modified Time: 15489971
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x37d2500): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2e6b740): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2ae1970): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x29d4c00): Algorithm vtkOBJReader(0x2ae1970) returned failure for request: vtkInformation (0x2ee9480)
+  Debug: Off
+  Modified Time: 15686970
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2ef92f0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2f01150): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2f01150): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2adce00): Algorithm vtkOBJReader(0x2f01150) returned failure for request: vtkInformation (0x27d0120)
+  Debug: Off
+  Modified Time: 15979836
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2e606d0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2ae1970): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x3473e40): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2e498d0): Algorithm vtkOBJReader(0x3473e40) returned failure for request: vtkInformation (0x30d3e60)
+  Debug: Off
+  Modified Time: 16144679
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2a570e0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2ae1970): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2ae1970): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x3f8e470): Algorithm vtkOBJReader(0x2ae1970) returned failure for request: vtkInformation (0x41a9b50)
+  Debug: Off
+  Modified Time: 16192726
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2ace480): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2e5da20): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2e5c980): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x3471330): Algorithm vtkOBJReader(0x2e5c980) returned failure for request: vtkInformation (0x29cb4e0)
+  Debug: Off
+  Modified Time: 16403429
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2d4c9f0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2ad0620): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x29f5e60): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2a4c120): Algorithm vtkOBJReader(0x29f5e60) returned failure for request: vtkInformation (0x45ce680)
+  Debug: Off
+  Modified Time: 16574101
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x27d24f0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x33d6ee0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x29e9830): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2adce00): Algorithm vtkOBJReader(0x29e9830) returned failure for request: vtkInformation (0x3ee9460)
+  Debug: Off
+  Modified Time: 16756555
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29d59d0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2d4c9f0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x3464250): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x3f8e1d0): Algorithm vtkOBJReader(0x3464250) returned failure for request: vtkInformation (0x45cb960)
+  Debug: Off
+  Modified Time: 16919951
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x41a9c30): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29bfb80): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x3e0b630): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2e57500): Algorithm vtkOBJReader(0x3e0b630) returned failure for request: vtkInformation (0x2df8ec0)
+  Debug: Off
+  Modified Time: 18508088
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29e4510): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x347c540): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x3e0b630): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x3009490): Algorithm vtkOBJReader(0x3e0b630) returned failure for request: vtkInformation (0x2edef80)
+  Debug: Off
+  Modified Time: 18618335
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x33d6ee0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2eeca80): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2e5c980): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2d860f0): Algorithm vtkOBJReader(0x2e5c980) returned failure for request: vtkInformation (0x2ae13e0)
+  Debug: Off
+  Modified Time: 19021657
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2d4c9f0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x27d24f0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x3f79e10): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x3f09050): Algorithm vtkOBJReader(0x3f79e10) returned failure for request: vtkInformation (0x1b75f60)
+  Debug: Off
+  Modified Time: 19158733
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2ad0620): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2e6b740): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x45e3180): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2f3e7b0): Algorithm vtkOBJReader(0x45e3180) returned failure for request: vtkInformation (0x45cf960)
+  Debug: Off
+  Modified Time: 19214553
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2adc830): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x4627660): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x29f5e60): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x37cec10): Algorithm vtkOBJReader(0x29f5e60) returned failure for request: vtkInformation (0x3b4bb30)
+  Debug: Off
+  Modified Time: 19424466
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x28ad630): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29bfb80): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2d2fa50): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x44cdbf0): Algorithm vtkOBJReader(0x2d2fa50) returned failure for request: vtkInformation (0x3481790)
+  Debug: Off
+  Modified Time: 19714408
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x45a6590): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2a772a0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x3ef4940): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x29d4940): Algorithm vtkOBJReader(0x3ef4940) returned failure for request: vtkInformation (0x29db4e0)
+  Debug: Off
+  Modified Time: 20314323
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2a432b0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2eeca80): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x29f5e60): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x44cca80): Algorithm vtkOBJReader(0x29f5e60) returned failure for request: vtkInformation (0x2a3c510)
+  Debug: Off
+  Modified Time: 20637295
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2eea0f0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2d92460): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2a617b0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x3f92f40): Algorithm vtkOBJReader(0x2a617b0) returned failure for request: vtkInformation (0x29c8e00)
+  Debug: Off
+  Modified Time: 20763047
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29e03b0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2a786b0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x33d1a60): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x3e0b6f0): Algorithm vtkOBJReader(0x33d1a60) returned failure for request: vtkInformation (0x4c73650)
+  Debug: Off
+  Modified Time: 20929300
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x3f19410): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2e63630): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x29f64e0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2a4c120): Algorithm vtkOBJReader(0x29f64e0) returned failure for request: vtkInformation (0x2a73110)
+  Debug: Off
+  Modified Time: 21260995
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x33d1a60): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2f03480): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2a3fb20): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x29ea4d0): Algorithm vtkOBJReader(0x2a3fb20) returned failure for request: vtkInformation (0x2a40140)
+  Debug: Off
+  Modified Time: 21487054
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x4631cf0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x4c5b920): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x3412ed0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x3e0b6f0): Algorithm vtkOBJReader(0x3412ed0) returned failure for request: vtkInformation (0x3ff7c20)
+  Debug: Off
+  Modified Time: 21622542
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x49642d0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2eeca80): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2d96e00): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2e62e00): Algorithm vtkOBJReader(0x2d96e00) returned failure for request: vtkInformation (0x29e14b0)
+  Debug: Off
+  Modified Time: 21714348
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2eeca80): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x4c5b920): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x28ad630): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2a6a7e0): Algorithm vtkOBJReader(0x28ad630) returned failure for request: vtkInformation (0x37ced00)
+  Debug: Off
+  Modified Time: 21776260
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x495f9f0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2d96e00): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2a786b0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2d861f0): Algorithm vtkOBJReader(0x2a786b0) returned failure for request: vtkInformation (0x3f32920)
+  Debug: Off
+  Modified Time: 22223273
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x495f9f0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x30093c0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2e6bd60): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x4eb8a00): Algorithm vtkOBJReader(0x2e6bd60) returned failure for request: vtkInformation (0x4a61760)
+  Debug: Off
+  Modified Time: 22462682
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x4c5d560): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x45b69e0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2e63630): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2e60780): Algorithm vtkOBJReader(0x2e63630) returned failure for request: vtkInformation (0x5077240)
+  Debug: Off
+  Modified Time: 22635139
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29d7f70): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x3f7a460): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x5061820): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x4fe5620): Algorithm vtkOBJReader(0x5061820) returned failure for request: vtkInformation (0x34578a0)
+  Debug: Off
+  Modified Time: 22777980
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2e484a0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x4c5d560): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2eef5c0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x29ea4d0): Algorithm vtkOBJReader(0x2eef5c0) returned failure for request: vtkInformation (0x2e6d820)
+  Debug: Off
+  Modified Time: 22917307
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x505fbe0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x4e82a50): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x29bfb80): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x4596c30): Algorithm vtkOBJReader(0x29bfb80) returned failure for request: vtkInformation (0x3e111f0)
+  Debug: Off
+  Modified Time: 23363783
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2ec6680): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x4c5d560): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x3ef0db0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2adce00): Algorithm vtkOBJReader(0x3ef0db0) returned failure for request: vtkInformation (0x2624010)
+  Debug: Off
+  Modified Time: 23508218
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x347c180): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x4c5d560): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x347c540): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x3dda580): Algorithm vtkOBJReader(0x347c540) returned failure for request: vtkInformation (0x2a41470)
+  Debug: Off
+  Modified Time: 23668179
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2a509b0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x3f31250): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x347c180): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x4fe0b60): Algorithm vtkOBJReader(0x347c180) returned failure for request: vtkInformation (0x2e484a0)
+  Debug: Off
+  Modified Time: 23920724
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2a509b0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x29ea4d0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x27d24f0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x2ef6b10): Algorithm vtkOBJReader(0x27d24f0) returned failure for request: vtkInformation (0x4597c40)
+  Debug: Off
+  Modified Time: 24085329
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x459a920): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2a3caf0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x5077570): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x3f4ece0): Algorithm vtkOBJReader(0x5077570) returned failure for request: vtkInformation (0x504db90)
+  Debug: Off
+  Modified Time: 24158722
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x4c77e50): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x4c5d560): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2a49fb0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x29e8b00): Algorithm vtkOBJReader(0x2a49fb0) returned failure for request: vtkInformation (0x2a3fd60)
+  Debug: Off
+  Modified Time: 24495824
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x3f0a7e0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x494b630): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2eea0f0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x45bc7a0): Algorithm vtkOBJReader(0x2eea0f0) returned failure for request: vtkInformation (0x2624010)
+  Debug: Off
+  Modified Time: 24631166
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2a49fb0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x4e83910): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2a3caf0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x495aab0): Algorithm vtkOBJReader(0x2a3caf0) returned failure for request: vtkInformation (0x4eaf650)
+  Debug: Off
+  Modified Time: 24667237
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x347c180): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2a49fb0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x27d24f0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x4596c30): Algorithm vtkOBJReader(0x27d24f0) returned failure for request: vtkInformation (0x45ba0f0)
+  Debug: Off
+  Modified Time: 24882354
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2eea0f0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x45b6bb0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2d96e00): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x3f8d890): Algorithm vtkOBJReader(0x2d96e00) returned failure for request: vtkInformation (0x28a70e0)
+  Debug: Off
+  Modified Time: 25293920
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x45b6bb0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x4fe22c0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x3fdbff0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x4ad0f00): Algorithm vtkOBJReader(0x3fdbff0) returned failure for request: vtkInformation (0x45e2eb0)
+  Debug: Off
+  Modified Time: 25421898
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x347c180): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x4968630): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x3f0a7e0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x4ad0f00): Algorithm vtkOBJReader(0x3f0a7e0) returned failure for request: vtkInformation (0x3dda500)
+  Debug: Off
+  Modified Time: 25646930
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x3f7a460): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x33cbe10): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x2a4b760): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x29e9800): Algorithm vtkOBJReader(0x2a4b760) returned failure for request: vtkInformation (0x2eedb70)
+  Debug: Off
+  Modified Time: 27639823
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x3ef0db0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2d925d0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x33cbe10): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x35d8750): Algorithm vtkOBJReader(0x33cbe10) returned failure for request: vtkInformation (0x4c4a610)
+  Debug: Off
+  Modified Time: 28054754
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x2a404d0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x35f3ad0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x3f0a7e0): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x49a0ea0): Algorithm vtkOBJReader(0x3f0a7e0) returned failure for request: vtkInformation (0x4fe33b0)
+  Debug: Off
+  Modified Time: 28162053
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x4ad1080): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x505fbe0): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/IO/vtkOBJReader.cxx, line 126
+vtkOBJReader (0x4ad1080): File /home/jakeware/Dropbox/MIT/classes/6.832/project/multi_link/quadrotor_base.obj not found
+
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 756
+vtkStreamingDemandDrivenPipeline (0x29e8c10): Algorithm vtkOBJReader(0x4ad1080) returned failure for request: vtkInformation (0x4618b20)
+  Debug: Off
+  Modified Time: 28270817
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x3f7a460): No input data
+
+ERROR: In /build/buildd/vtk-5.8.0/Graphics/vtkTransformPolyDataFilter.cxx, line 84
+vtkTransformPolyDataFilter (0x4e7ccd0): No input data
+

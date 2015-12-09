@@ -29,38 +29,35 @@
   </link>
 
   <!-- PENDULUM -->
-  <joint name="base_weld" type="fixed">
+  <!-- LINK1 -->
+  <joint name="theta11" type="continuous">
     <parent link="quad" />
-    <child link="pend_base" />
+    <child link="link_virtual1" />
     <origin xyz="0 0 0" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.0" />
   </joint>
 
-  <link name="pend_base">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0"/>
-      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" />
-      <geometry>
-        <sphere radius="0" />
-      </geometry> 
-      <material name="green" />
-    </visual>
-  </link>
+  <link name="link_virtual1" /> 
 
-  <!-- LINK1 -->
+  <joint name="theta12" type="revolute">
+    <parent link="link_virtual1"/>
+    <child link="link1" />
+    <origin xyz="0 0 0" />
+    <axis xyz="1 0 0" />
+    <dynamics damping="0.0" />
+  </joint>
+
   <link name="link1">
     <inertial>
-      <origin xyz="0 0 -0.075" rpy="0 0 0" />
-      <mass value="0.05" />
+      <origin xyz="0 0 -0.04" rpy="0 0 0" />
+      <mass value="0.001" />
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
     </inertial>
     <visual>
-      <origin xyz="0 0 -0.075" rpy="0 0 0" />
+      <origin xyz="0 0 -0.04" rpy="0 0 0" />
       <geometry>
-         <cylinder length="0.15" radius=".005" />
+         <cylinder length="0.08" radius=".005" />
       </geometry>
       <material name="red">
 	<color rgba="1 0 0 1" />
@@ -68,61 +65,134 @@
     </visual>
   </link>
 
-  <joint name="theta1" type="continuous">
-    <parent link="pend_base" />
-    <child link="link1" />
-    <origin xyz="0 0 0" />
+  <!-- LINK2 -->
+  <joint name="theta21" type="continuous">
+    <parent link="link1" />
+    <child link="link_virtual2" />
+    <origin xyz="0 0 -0.08" />
     <axis xyz="0 1 0" />
-    <dynamics damping="0.1" />
+    <dynamics damping="0.0" />
   </joint>
 
+  <link name="link_virtual2" /> 
 
-  <!-- LINK2 -->
+  <joint name="theta22" type="revolute">
+    <parent link="link_virtual2"/>
+    <child link="link2" />
+    <origin xyz="0 0 0" />
+    <axis xyz="1 0 0" />
+    <dynamics damping="0.0" />
+  </joint>
+
   <link name="link2">
     <inertial>
-      <origin xyz="0 0 -0.075" rpy="0 0 0" />
-      <mass value="0.05" />
+      <origin xyz="0 0 -0.04" rpy="0 0 0" />
+      <mass value="0.001" />
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
     </inertial>
     <visual>
-      <origin xyz="0 0 -0.075" rpy="0 0 0" />
+      <origin xyz="0 0 -0.04" rpy="0 0 0" />
       <geometry>
-         <cylinder length="0.15" radius=".005" />
+         <cylinder length="0.08" radius=".005" />
       </geometry>
       <material name="blue">
 	<color rgba="0 0 1 1" />
       </material>
     </visual>
   </link>
-  
-  <joint name="theta2" type="continuous">
-    <parent link="link1" />
-    <child link="link2" />
-    <origin xyz="0 0 -0.15" />
+
+  <!-- LINK3 -->
+  <joint name="theta31" type="continuous">
+    <parent link="link2" />
+    <child link="link_virtual3" />
+    <origin xyz="0 0 -0.08" />
     <axis xyz="0 1 0" />
-    <dynamics damping="0.1" />
+    <dynamics damping="0.0" />
   </joint>
 
+  <link name="link_virtual3" /> 
+
+  <joint name="theta32" type="revolute">
+    <parent link="link_virtual3"/>
+    <child link="link3" />
+    <origin xyz="0 0 0" />
+    <axis xyz="1 0 0" />
+    <dynamics damping="0.0" />
+  </joint>
+
+  <link name="link3">
+    <inertial>
+      <origin xyz="0 0 -0.04" rpy="0 0 0" />
+      <mass value="0.001" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.04" rpy="0 0 0" />
+      <geometry>
+         <cylinder length="0.08" radius=".005" />
+      </geometry>
+      <material name="red">
+	<color rgba="1 0 0 1" />
+      </material>
+    </visual>
+  </link>
+
+  <!-- LINK4 -->
+  <joint name="theta41" type="continuous">
+    <parent link="link3" />
+    <child link="link_virtual4" />
+    <origin xyz="0 0 -0.08" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.0" />
+  </joint>
+
+  <link name="link_virtual4" /> 
+
+  <joint name="theta42" type="revolute">
+    <parent link="link_virtual4"/>
+    <child link="link4" />
+    <origin xyz="0 0 0" />
+    <axis xyz="1 0 0" />
+    <dynamics damping="0.0" />
+  </joint>
+
+  <link name="link4">
+    <inertial>
+      <origin xyz="0 0 -0.04" rpy="0 0 0" />
+      <mass value="0.001" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.04" rpy="0 0 0" />
+      <geometry>
+         <cylinder length="0.08" radius=".005" />
+      </geometry>
+      <material name="blue">
+	<color rgba="0 0 1 1" />
+      </material>
+    </visual>
+  </link>
+
+  <!-- BALL -->
   <joint name="arm_weld" type="fixed">
-    <parent link="link2" />
+    <parent link="link4" />
     <child link="ball" />
   </joint>
 
   <link name="ball">
     <inertial>
-      <origin xyz="0 0 -0.15" rpy="0 0 0" />
+      <origin xyz="0 0 -0.08" rpy="0 0 0" />
       <mass value="0.5"/>
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
     <visual>
-      <origin xyz="0 0 -0.15"/>
+      <origin xyz="0 0 -0.08"/>
       <geometry>
         <sphere radius=".025"/>
       </geometry>
-      <material name="blue" />
     </visual>
     <collision>
-      <origin xyz="0 0 -0.15"/>
+      <origin xyz="0 0 -0.08"/>
       <geometry>
         <sphere radius=".025"/>
       </geometry>
