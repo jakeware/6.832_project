@@ -6,7 +6,7 @@ function [utraj,xtraj,prog,r] = wall_dodge
 %% Setup
 plot_results = 0;
 
-num_links = 1;  % 1,2,4,8 (8 doesn't work, too many links for drake)
+num_links = 8;  % 1,2,4,8 (8 doesn't work, too many links for drake)
 pend_length = 0.32;  % needs to match total length to ball in urdf
 link_length = pend_length/num_links;
 max_z = 1.25;  % max quad height
@@ -16,10 +16,10 @@ start_pos = [0;0;0.5];
 goal_pos = [6;0;0.5];
 
 % time setup
-N = 16;  % must be even
+N = 10;  % must be even
+wall_node = 6;
 minimum_duration = .1;
 maximum_duration = 10;
-wall_node = 12;
 
 %% FUNCTION
 % setup
@@ -168,7 +168,7 @@ goalConstraint = FunctionHandleConstraint([0;0;0],[0;0;0],r.getNumStates(),@(x) 
 prog = prog.addStateConstraint(goalConstraint,{N});
 
 % add costs
-prog = prog.addRunningCost(@cost);
+% prog = prog.addRunningCost(@cost);
 % prog = prog.addFinalCost(@finalCost);
 
 % solve for trajectory
