@@ -9,9 +9,8 @@ plot_results = 0;
 num_links = 1;  % 1,2,4,8 (8 doesn't work, too many links for drake)
 pend_length = 0.32;  % needs to match total length to ball in urdf
 link_length = pend_length/num_links;
-max_z = 1.25;
+max_z = 1.25;  % max quad height
 
-%% FUNCTION
 % initial and final state
 start_pos = [0;0;0.5];
 goal_pos = [6;0;0.5];
@@ -22,8 +21,9 @@ minimum_duration = .1;
 maximum_duration = 10;
 wall_node = 12;
 
+%% FUNCTION
 % setup
-r = Quadrotor();
+r = QuadrotorML(num_links);
 prog = DircolTrajectoryOptimization(r,N,[minimum_duration maximum_duration]);  
 
 % add obstacle
