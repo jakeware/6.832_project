@@ -1,23 +1,16 @@
-function [utraj,xtraj,prog,r] = ball_goal_above
+function [utraj,xtraj,prog,r] = ball_goal(num_links,pend_length,N,N_top,top_goal_pos,fwd_goal_pos)
 
 %% NOTES
 %r.getStateFrame.getCoordinateNames  % print state variable names
 
 %% Setup
-plot_results = 1;
-
-%% FUNCTION
-num_links = 8;  % 1,2,4,8
-pend_length = 0.32;  % needs to match total length to ball in urdf
 link_length = pend_length/num_links;
-
-r = QuadrotorML(num_links);
-
-N = 18;  % knot points
 minimum_duration = .1;
 maximum_duration = 5;
-N_top = 6;
 
+
+%% FUNCTION
+r = QuadrotorML(num_links);
 prog = DircolTrajectoryOptimization(r,N,[minimum_duration maximum_duration]);  
 
 % add constraint: initial state
@@ -28,10 +21,6 @@ u0 = double(nominalThrust(r));
 % quad bounding box
 quad_bound_min = [-2,-0.1,pend_length];
 quad_bound_max = [2,0.1,3];
-
-% add constraint: Ball Goal state
-top_goal_pos = [-2.3;0;2];  % ball outside of box in x direction
-fwd_goal_pos = [2.3;0;2];
 
 % plan visualization
 v = constructVisualizer(r);
@@ -156,65 +145,6 @@ toc
 % create visualization
 v.playback(xtraj,struct('slider',true));
 
-%% ANALYSIS
-% get state over time
-time = xtraj.tspan(1):0.01:xtraj.tspan(2);
-x_t = xtraj.eval(time);
-
-% get ball trajectory
-ball_t = zeros(3,length(x_t));
-
-for i=1:length(x_t)
-  q = x_t(1:r.getNumPositions,i);
-  kinsol = r.doKinematics(q);
-  [ball_pos,dBall_pos] = r.forwardKin(kinsol,findFrameId(r,'ball_com'),[0;0;-link_length]);
-  ball_t(1:3,i) = ball_pos;
-end
-
-%% PLOT
-if plot_results
-  % quad x,y,z
-  figure
-  hold on
-
-  plot(time,x_t(1,:),'r-')
-  plot(time,x_t(2,:),'g-')
-  plot(time,x_t(3,:),'b-')
-  title('Quad Position Over Time')
-  xlabel('Time [s]')
-  ylabel('Position [m]')
-  legend('x','y','z')
-  hold off
-
-  % ball x,y,z
-  figure
-  hold on
-
-  plot(time,ball_t(1,:),'r-')
-  plot(time,ball_t(2,:),'g-')
-  plot(time,ball_t(3,:),'b-')
-  title('Ball Position Over Time')
-  xlabel('Time [s]')
-  ylabel('Position [m]')
-  legend('x','y','z')
-
-  hold off
-
-  % 3d plot of quad and ball
-  figure
-  hold on
-
-  plot3(x_t(1,:),x_t(2,:),x_t(3,:),'b-')
-  plot3(ball_t(1,:),ball_t(2,:),ball_t(3,:),'r-')
-
-  title('Quad and Ball Position Over Time')
-  xlabel('X-Position [m]')
-  ylabel('Y-Position [m]')
-  zlabel('Z-Position [m]')
-  legend('quad','ball')
-
-  hold off
-end
 end
 
 function [f,df] = top_state_con(obj,x,top_goal_pos,link_length)
