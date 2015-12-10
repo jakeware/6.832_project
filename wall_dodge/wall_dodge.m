@@ -6,7 +6,7 @@ function [utraj,xtraj,prog,r] = wall_dodge
 %% Setup
 plot_results = 0;
 
-num_links = 8;  % 1,2,4,8 (8 doesn't work, too many links for drake)
+num_links = 8;  % 1,2,4,8
 pend_length = 0.32;  % needs to match total length to ball in urdf
 link_length = pend_length/num_links;
 max_z = 1.25;  % max quad height
