@@ -4,19 +4,19 @@ function [utraj,xtraj,prog,r] = ball_goal_above
 %r.getStateFrame.getCoordinateNames  % print state variable names
 
 %% Setup
-plot_results = 0;
+plot_results = 1;
 
 %% FUNCTION
-num_links = 1;  % 1,2,4,8
+num_links = 8;  % 1,2,4,8
 pend_length = 0.32;  % needs to match total length to ball in urdf
 link_length = pend_length/num_links;
 
 r = QuadrotorML(num_links);
 
-N = 12;  % knot points
+N = 18;  % knot points
 minimum_duration = .1;
 maximum_duration = 5;
-N_top = N/2;
+N_top = 6;
 
 prog = DircolTrajectoryOptimization(r,N,[minimum_duration maximum_duration]);  
 
@@ -26,11 +26,12 @@ x0.base_z = 0.5;
 u0 = double(nominalThrust(r));
 
 % quad bounding box
-quad_bound_min = [-5,-0.1,pend_length];
-quad_bound_max = [5,0.1,3];
+quad_bound_min = [-2,-0.1,pend_length];
+quad_bound_max = [2,0.1,3];
 
 % add constraint: Ball Goal state
-goal_pos = [0;0;3.3];  % ball outside of box in x direction
+top_goal_pos = [-2.3;0;2];  % ball outside of box in x direction
+fwd_goal_pos = [2.3;0;2];
 
 % plan visualization
 v = constructVisualizer(r);
@@ -121,8 +122,12 @@ theta2_ub = repmat(pi/2,N,1);
 prog = prog.addStateConstraint(LinearConstraint(theta2_lb,theta2_ub,A),{1:N},state_select);
 
 % add constraint: goal position
-goalConstraint = FunctionHandleConstraint([0;0;0],[0;0;0],r.getNumStates,@(x) final_state_con(r,x,goal_pos,link_length),1);
-prog = prog.addStateConstraint(goalConstraint,{N_top});
+goalConstraint1 = FunctionHandleConstraint([0;0;0],[0;0;0],r.getNumStates,@(x) top_state_con(r,x,top_goal_pos,link_length),1);
+prog = prog.addStateConstraint(goalConstraint1,{N_top});
+
+% add constraint: goal position
+goalConstraint2 = FunctionHandleConstraint([0;0;0],[0;0;0],r.getNumStates,@(x) fwd_state_con(r,x,fwd_goal_pos,link_length),1);
+prog = prog.addStateConstraint(goalConstraint2,{N_top + 6});
 
 % add costs
 prog = prog.addRunningCost(@cost);
@@ -212,12 +217,21 @@ if plot_results
 end
 end
 
-function [f,df] = final_state_con(obj,x,goal_pos,link_length)
+function [f,df] = top_state_con(obj,x,top_goal_pos,link_length)
   q = x(1:obj.getNumStates/2);
   kinsol = obj.doKinematics(q);
   [ball_pos,dBall_pos] = obj.forwardKin(kinsol,findFrameId(obj,'ball_com'),[0;0;-link_length]);
 
-  f = ball_pos - goal_pos;
+  f = ball_pos - top_goal_pos;
+  df = [dBall_pos zeros(3,obj.getNumStates/2)];
+end
+
+function [f,df] = fwd_state_con(obj,x,fwd_goal_pos,link_length)
+  q = x(1:obj.getNumStates/2);
+  kinsol = obj.doKinematics(q);
+  [ball_pos,dBall_pos] = obj.forwardKin(kinsol,findFrameId(obj,'ball_com'),[0;0;-link_length]);
+
+  f = ball_pos - fwd_goal_pos;
   df = [dBall_pos zeros(3,obj.getNumStates/2)];
 end
 
