@@ -1,23 +1,18 @@
-function [utraj,xtraj,prog,r] = wall_dodge
+function [utraj,xtraj,prog,r,obs_con_pos] = wall_dodge(num_links,pend_length,N,wall_node)
 
 %% NOTES
 %r.getStateFrame.getCoordinateNames  % print state variable names
 
 %% Setup
-plot_results = 0;
-
-num_links = 1;  % 1,2,4,8
-pend_length = 0.32;  % needs to match total length to ball in urdf
-link_length = pend_length/num_links;
 max_z = 1.25;  % max quad height
+link_length = pend_length/num_links;
 
 % initial and final state
 start_pos = [0;0;0.5];
 goal_pos = [6;0;0.5];
 
 % time setup
-N = 16;  % must be even
-wall_node = 12;
+
 minimum_duration = .1;
 maximum_duration = 10;
 
@@ -168,7 +163,7 @@ goalConstraint = FunctionHandleConstraint([0;0;0],[0;0;0],r.getNumStates(),@(x) 
 prog = prog.addStateConstraint(goalConstraint,{N});
 
 % add costs
-prog = prog.addRunningCost(@cost);
+% prog = prog.addRunningCost(@cost);
 % prog = prog.addFinalCost(@finalCost);
 
 % solve for trajectory
@@ -179,66 +174,6 @@ toc
 
 % create visualization
 v.playback(xtraj,struct('slider',true));
-
-%% ANALYSIS
-% get state over time
-time = xtraj.tspan(1):0.01:xtraj.tspan(2);
-x_t = xtraj.eval(time);
-
-% get ball trajectory
-ball_t = zeros(3,length(x_t));
-
-for i=1:length(x_t)
-  q = x_t(1:r.getNumStates()/2,i);
-  kinsol = r.doKinematics(q);
-  [ball_pos,dBall_pos] = r.forwardKin(kinsol,findFrameId(r,'ball_com'),[0;0;-link_length]);
-  ball_t(1:3,i) = ball_pos;
-end
-
-%% PLOT
-if plot_results
-  % quad x,y,z
-  figure
-  hold on
-
-  plot(time,x_t(1,:),'r-')
-  plot(time,x_t(2,:),'g-')
-  plot(time,x_t(3,:),'b-')
-  title('Quad Position Over Time')
-  xlabel('Time [s]')
-  ylabel('Position [m]')
-  legend('x','y','z')
-  hold off
-
-  % ball x,y,z
-  figure
-  hold on
-
-  plot(time,ball_t(1,:),'r-')
-  plot(time,ball_t(2,:),'g-')
-  plot(time,ball_t(3,:),'b-')
-  title('Ball Position Over Time')
-  xlabel('Time [s]')
-  ylabel('Position [m]')
-  legend('x','y','z')
-
-  hold off
-
-  % 3d plot of quad and ball
-  figure
-  hold on
-
-  plot3(x_t(1,:),x_t(2,:),x_t(3,:),'b-')
-  plot3(ball_t(1,:),ball_t(2,:),ball_t(3,:),'r-')
-
-  title('Quad and Ball Position Over Time')
-  xlabel('X-Position [m]')
-  ylabel('Y-Position [m]')
-  zlabel('Z-Position [m]')
-  legend('quad','ball')
-
-  hold off
-end
 
 end
 
