@@ -1,6 +1,6 @@
 function c = runLQR
 
-p = PlanarQuadPlant;
+p = PlanarQuadBallPendPlant;
 v = PlanarQuadVisualizer(p);
 
 if checkDependency('sedumi')
