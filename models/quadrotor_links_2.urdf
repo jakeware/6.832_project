@@ -32,20 +32,10 @@
   <!-- LINK1 -->
   <joint name="theta11" type="continuous">
     <parent link="quad" />
-    <child link="link_virtual1" />
-    <origin xyz="0 0 0" />
-    <axis xyz="0 1 0" />
-    <dynamics damping="0.1" />
-  </joint>
-
-  <link name="link_virtual1" /> 
-
-  <joint name="theta12" type="revolute">
-    <parent link="link_virtual1"/>
     <child link="link1" />
     <origin xyz="0 0 0" />
-    <axis xyz="1 0 0" />
-    <dynamics damping="0.1" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.05" />
   </joint>
 
   <link name="link1">
@@ -68,20 +58,10 @@
   <!-- LINK2 -->
   <joint name="theta21" type="continuous">
     <parent link="link1" />
-    <child link="link_virtual2" />
+    <child link="link2" />
     <origin xyz="0 0 -0.16" />
     <axis xyz="0 1 0" />
-    <dynamics damping="0.1" />
-  </joint>
-
-  <link name="link_virtual2" /> 
-
-  <joint name="theta22" type="revolute">
-    <parent link="link_virtual2"/>
-    <child link="link2" />
-    <origin xyz="0 0 0" />
-    <axis xyz="1 0 0" />
-    <dynamics damping="0.1" />
+    <dynamics damping="0.05" />
   </joint>
 
   <link name="link2">
@@ -110,7 +90,7 @@
   <link name="ball">
     <inertial>
       <origin xyz="0 0 -0.16" rpy="0 0 0" />
-      <mass value="0.5"/>
+      <mass value="0.05"/>
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
     <visual>

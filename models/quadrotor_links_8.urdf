@@ -30,7 +30,7 @@
 
   <!-- PENDULUM -->
   <!-- LINK1 -->
-  <joint name="theta11" type="continuous">
+  <joint name="theta11" type="revolute">
     <parent link="quad" />
     <child link="link_virtual1" />
     <origin xyz="0 0 0" />
@@ -66,7 +66,7 @@
   </link>
 
   <!-- LINK2 -->
-  <joint name="theta21" type="continuous">
+  <joint name="theta21" type="revolute">
     <parent link="link1" />
     <child link="link_virtual2" />
     <origin xyz="0 0 -0.04" />
@@ -102,7 +102,7 @@
   </link>
 
   <!-- LINK3 -->
-  <joint name="theta31" type="continuous">
+  <joint name="theta31" type="revolute">
     <parent link="link2" />
     <child link="link_virtual3" />
     <origin xyz="0 0 -0.04" />
@@ -138,7 +138,7 @@
   </link>
 
   <!-- LINK4 -->
-  <joint name="theta41" type="continuous">
+  <joint name="theta41" type="revolute">
     <parent link="link3" />
     <child link="link_virtual4" />
     <origin xyz="0 0 -0.04" />
@@ -174,7 +174,7 @@
   </link>
 
   <!-- LINK5 -->
-  <joint name="theta51" type="continuous">
+  <joint name="theta51" type="revolute">
     <parent link="link4" />
     <child link="link_virtual5" />
     <origin xyz="0 0 -0.04" />
@@ -210,7 +210,7 @@
   </link>
 
   <!-- LINK6 -->
-  <joint name="theta61" type="continuous">
+  <joint name="theta61" type="revolute">
     <parent link="link5" />
     <child link="link_virtual6" />
     <origin xyz="0 0 -0.04" />
@@ -246,7 +246,7 @@
   </link>
 
   <!-- LINK7 -->
-  <joint name="theta71" type="continuous">
+  <joint name="theta71" type="revolute">
     <parent link="link6" />
     <child link="link_virtual7" />
     <origin xyz="0 0 -0.04" />
@@ -282,7 +282,7 @@
   </link>
 
   <!-- LINK8 -->
-  <joint name="theta81" type="continuous">
+  <joint name="theta81" type="revolute">
     <parent link="link7" />
     <child link="link_virtual8" />
     <origin xyz="0 0 -0.04" />

@@ -5,7 +5,7 @@ clc
 %% Optimization
 N = 18;  % time steps
 N_top = 6;
-num_links = 8;  % 1,2,4,8 (8 doesn't work, too many links for drake)
+num_links = 2;  % 1,2,4,8 (8 doesn't work, too many links for drake)
 pend_length = 0.32;  % needs to match total length to ball in urdf
 link_length = pend_length/num_links;
 top_goal_pos = [-2.3;0;2];  % ball outside of box in x direction

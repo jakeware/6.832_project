@@ -4,6 +4,7 @@ classdef QuadrotorML < RigidBodyManipulator
     function obj = QuadrotorML(num_links)
       options.floating = true; 
       options.terrain = RigidBodyFlatTerrain();
+      options.ignore_self_collisions = true;
       w = warning('off','Drake:RigidBodyManipulator:ReplacedCylinder');
       warning('off','Drake:RigidBodyManipulator:UnsupportedContactPoints');
       filename = strcat('quadrotor_links_',num2str(num_links),'.urdf');

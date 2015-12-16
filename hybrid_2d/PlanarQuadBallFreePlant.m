@@ -21,9 +21,12 @@ classdef PlanarQuadBallFreePlant < SecondOrderSystem
   end
   
   methods
-    function obj = PlanarQuadBallFreePlant()
-      obj = obj@SecondOrderSystem(3,2,true);
-      obj = obj.setOutputFrame(obj.getStateFrame);  % allow full-state feedback
+    function obj = PlanarQuadBallFreePlant(hqb_plant)
+      obj = obj@SecondOrderSystem(6,2,true);
+      
+      obj = setOutputFrame(obj,CoordinateFrame('QBFreeState',12,'x',{'x_q','z_q','phi_q','x_l','z_l','phi_l','x_q_dot','z_q_dot','phi_q_dot','x_l_dot','z_l_dot','phi_l_dot'}));
+      obj = setInputFrame(obj,getInputFrame(hqb_plant));
+      obj = setOutputFrame(obj,getOutputFrame(hqb_plant));
     end
     
     function qdd = sodynamics(obj,t,q,qd,u)

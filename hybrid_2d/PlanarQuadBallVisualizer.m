@@ -1,4 +1,4 @@
-classdef PlanarQuadVisualizer < Visualizer
+classdef PlanarQuadBallVisualizer < Visualizer
 % Implements the draw function for the Planar Quadrotor model
 
   properties
@@ -6,7 +6,7 @@ classdef PlanarQuadVisualizer < Visualizer
   end
 
   methods
-    function obj = PlanarQuadVisualizer(plant)
+    function obj = PlanarQuadBallVisualizer(plant)
       typecheck(plant,'PlanarQuadBallPendPlant');
       obj = obj@Visualizer(plant.getOutputFrame);
       obj.W=plant.W;

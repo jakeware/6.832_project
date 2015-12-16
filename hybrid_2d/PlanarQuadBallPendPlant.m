@@ -21,9 +21,12 @@ classdef PlanarQuadBallPendPlant < SecondOrderSystem
   end
   
   methods
-    function obj = PlanarQuadBallPendPlant()
-      obj = obj@SecondOrderSystem(3,2,true);
-      obj = obj.setOutputFrame(obj.getStateFrame);  % allow full-state feedback
+    function obj = PlanarQuadBallPendPlant(hqb_plant)
+      obj = obj@SecondOrderSystem(6,2,true);
+      
+      obj = setOutputFrame(obj,CoordinateFrame('QBPendState',12,'x',{'x_q','z_q','phi_q','x_l','z_l','phi_l','x_q_dot','z_q_dot','phi_q_dot','x_l_dot','z_l_dot','phi_l_dot'}));
+      obj = setInputFrame(obj,getInputFrame(hqb_plant));
+      obj = setOutputFrame(obj,getOutputFrame(hqb_plant));
     end
     
     function qdd = sodynamics(obj,t,q,qd,u)
@@ -38,8 +41,8 @@ classdef PlanarQuadBallPendPlant < SecondOrderSystem
       Tp = -(x_ldd*obj.m_l + obj.m_l*obj.g*e3);  % from quad to ball
       x_qdd = (f*R*e3 + Tp)/obj.m_q - obj.g*e3;
       qdd = [
-        x_qdd(1)  % x quad position
-        x_qdd(2)  % z quad position
+        x_qdd(1);  % x quad position
+        x_qdd(2);  % z quad position
         (u(2)-u(1))/obj.W/obj.I;  % quad roll angle (phi_q)
         x_ldd(1);  % x load position
         x_ldd(2);  % z load position
